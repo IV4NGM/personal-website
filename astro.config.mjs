@@ -15,4 +15,5 @@ export default defineConfig({
   },
   site: "https://iv4ngm.github.io/personal-website",
   base: "/personal-website",
+  outDir: "./docs",
 });
