@@ -2,7 +2,7 @@ import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
 
 const publications = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/publications" }),
+  loader: glob({ pattern: ["**/*.md", "!_template.md"], base: "./src/content/publications" }),
   schema: z.object({
     title: z.string(),
     authors: z.array(z.string()).default([]),
@@ -18,12 +18,13 @@ const publications = defineCollection({
 });
 
 const talks = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/talks" }),
+  loader: glob({ pattern: ["**/*.md", "!_template.md"], base: "./src/content/talks" }),
   schema: z.object({
     title: z.string(),
     event: z.string(),
     date: z.coerce.date(),
     location: z.string().optional(),
+    websiteUrl: z.string().url().optional(),
     slidesUrl: z.string().url().optional(),
     recordingUrl: z.string().url().optional(),
     sortOrder: z.number().default(0)
@@ -31,7 +32,7 @@ const talks = defineCollection({
 });
 
 const awards = defineCollection({
-  loader: glob({ pattern: "**/*.md", base: "./src/content/awards" }),
+  loader: glob({ pattern: ["**/*.md", "!_template.md"], base: "./src/content/awards" }),
   schema: z.object({
     title: z.string(),
     organization: z.string(),

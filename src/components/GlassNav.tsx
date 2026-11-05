@@ -6,7 +6,7 @@ const links = [
   ["Publications", "#publications"],
   ["Talks", "#talks"],
   ["Awards", "#awards"],
-  ["Writing", "#writing"],
+  // ["Writing", "#writing"],
 ];
 
 export default function GlassNav() {
@@ -14,7 +14,7 @@ export default function GlassNav() {
 
   return (
     <nav className="glass-nav" aria-label="Main navigation">
-      <a className="nav-mark" href="#top" aria-label="Back to top">IGM<span>.</span></a>
+      <a className="nav-mark" href="#top" aria-label="Back to top">Iván G M</a>
       <button
         className="menu-toggle"
         type="button"
@@ -28,7 +28,7 @@ export default function GlassNav() {
         {links.map(([label, href]) => (
           <a key={href} href={href} onClick={() => setOpen(false)}>{label}</a>
         ))}
-        <a className="nav-contact" href="mailto:ivan.garcia@cimat.mx" onClick={() => setOpen(false)}>Contact ↗</a>
+        <a className="nav-contact" href="mailto:ivan.garcia@cimat.mx" onClick={() => setOpen(false)}>Contact me ↗</a>
       </div>
     </nav>
   );
