@@ -1,0 +1,2 @@
+Replace this file with your CV PDF and name it cv.pdf.
+The homepage links to /cv.pdf.
