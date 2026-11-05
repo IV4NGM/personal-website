@@ -1,11 +1,11 @@
 import { useState } from "react";
 
 const links = [
-  ["About", "#about"],
-  ["Research", "#research"],
-  ["Publications", "#publications"],
-  ["Talks", "#talks"],
-  ["Awards", "#awards"],
+  ["About", `${import.meta.env.BASE_URL}#about`],
+  ["Research", `${import.meta.env.BASE_URL}#research`],
+  ["Publications", `${import.meta.env.BASE_URL}#publications`],
+  ["Talks", `${import.meta.env.BASE_URL}#talks`],
+  ["Awards", `${import.meta.env.BASE_URL}#awards`],
   // ["Writing", "#writing"],
 ];
 
@@ -14,7 +14,7 @@ export default function GlassNav() {
 
   return (
     <nav className="glass-nav" aria-label="Main navigation">
-      <a className="nav-mark" href="#top" aria-label="Back to top">Iván G M</a>
+      <a className="nav-mark" href={`${import.meta.env.BASE_URL}#top`} aria-label="Back to top">Iván G M</a>
       <button
         className="menu-toggle"
         type="button"
