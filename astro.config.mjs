@@ -13,6 +13,6 @@ export default defineConfig({
     remarkPlugins: [remarkMath],
     rehypePlugins: [rehypeKatex],
   },
-  site: "https://iv4ngm.github.io",
+  site: "https://iv4ngm.github.io/personal-website",
   base: "/personal-website",
 });

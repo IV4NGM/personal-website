@@ -1,11 +1,12 @@
 import { useState } from "react";
 
+const baseUrl = import.meta.env.BASE_URL.endsWith("/") ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 const links = [
-  ["About", `${import.meta.env.BASE_URL}#about`],
-  ["Research", `${import.meta.env.BASE_URL}#research`],
-  ["Publications", `${import.meta.env.BASE_URL}#publications`],
-  ["Talks", `${import.meta.env.BASE_URL}#talks`],
-  ["Awards", `${import.meta.env.BASE_URL}#awards`],
+  ["About", `${baseUrl}#about`],
+  ["Research", `${baseUrl}#research`],
+  ["Publications", `${baseUrl}#publications`],
+  ["Talks", `${baseUrl}#talks`],
+  ["Awards", `${baseUrl}#awards`],
   // ["Writing", "#writing"],
 ];
 
@@ -14,7 +15,7 @@ export default function GlassNav() {
 
   return (
     <nav className="glass-nav" aria-label="Main navigation">
-      <a className="nav-mark" href={`${import.meta.env.BASE_URL}#top`} aria-label="Back to top">Iván G M</a>
+      <a className="nav-mark" href={`${baseUrl}#top`} aria-label="Back to top">Iván G M</a>
       <button
         className="menu-toggle"
         type="button"
